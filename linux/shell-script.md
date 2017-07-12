@@ -1,4 +1,3 @@
-# A Shell Script file on Linux
 ## How to write shell script
 Following steps are required to write shell script:
 1. Use any editor like vi,vim,nano or mcedit to write shell script.
@@ -142,3 +141,130 @@ A pipe is a way to connect the output of one program to the input of another pro
 Process is kind of program or task carried out by your PC. Process defined as:
 - **A process is program (command given by user) to perform specific Job. In Linux when you start process, it gives a number to process (called PID or process-id), PID starts from 0 to 65535.**
 - **An instance of running command is called process and the number printed by shell is called process-id (PID), this PID can be use to refer specific running process.**
+## if condition
+**Syntax**
+```
+    if condition
+	then
+		if condition
+		then
+			.....
+			..
+			do this
+		else
+			....
+			..
+			do this
+		fi
+	else
+		...
+		.....
+		do this
+	fi
+```
+## Multilevel if-then-else
+**Syntax**
+```
+    if condition
+   then
+       condition is zero (true - 0)
+       execute all commands up to elif statement
+   elif condition1 
+   then
+       condition1 is zero (true - 0)
+       execute all commands up to elif statement  
+   elif condition2
+   then
+       condition2 is zero (true - 0)
+       execute all commands up to elif statement          
+   else
+       None of the above condtion,condtion1,condtion2 are true (i.e. 
+       all of the above nonzero or false)
+       execute all commands up to fi
+   fi
+```
+## for Loop
+**Syntax**
+```
+    for { variable name } in { list }
+    do
+         execute one for each item in the list until the list is
+         not finished (And repeat all statement between do and done)
+    done
+    
+    #Or
+    
+    for (( expr1; expr2; expr3 ))
+         do
+               .....
+			   ...
+               repeat all statements between do and 
+               done until expr2 is TRUE
+        done
+```
+**Example**
+```
+    for i in 1 2 3 4 5
+    do
+    echo "Welcome $i times"
+    done
+    
+    #Or
+    
+    for ((  i = 0 ;  i <= 5;  i++  ))
+        do
+          echo "Welcome $i times"
+        done
+```
+## while loop
+**Syntax**
+```
+    while [ condition ]
+   do
+        command1
+        command2
+        command3
+        ..
+        ....
+    done
+```
+## The case Statement
+**Syntax**
+```
+    case  $variable-name  in
+                pattern1)   command
+                                ...
+                                ..
+                                command;;
+                pattern2)   command
+                                ...
+                                ..
+                                command;;
+                patternN)   command
+                                ...
+                                ..
+                                command;;
+                *)             command
+                                ...
+                                ..
+                                command;;
+           esac
+```
+**Example**
+```
+    case $rental in
+   "car") echo "For $rental Rs.20 per k/m";;
+   "van") echo "For $rental Rs.10 per k/m";;
+   "jeep") echo "For $rental Rs.5 per k/m";;
+   "bicycle") echo "For $rental 20 paisa per k/m";;
+   *) echo "Sorry, I can not gat a $rental for you";;
+   # If $variable-name is not in from pattern 1 to pattern N. It will run command in * pattern.
+esac
+```
+## How to de-bug the shell script?
+While programming shell sometimes you need to find the errors (bugs) in shell script and correct the errors (remove errors - debug). For this purpose you can use -v and -x option with sh or bash command to debug the shell script. General syntax is as follows:
+```
+    sh   option   { shell-script-name }
+    OR
+    bash   option   { shell-script-name }
+```
