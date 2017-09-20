@@ -1,0 +1,15 @@
+Fix Briged adapter not selected:
+
+Ref: https://stackoverflow.com/questions/31922055/bridged-networking-not-working-in-virtualbox-under-windows-10
+In Virtualbox :
+
+Go to File > Preferences On the Network tab select Host only Networks click on "add a Host-only adapter" give it a name by default it is "VirtualBox Host-Only Ethernet adapter"
+In Windows :
+
+go to Network connections on Windows and highlight both the real adapter and the new virtual ethernet adapter that you just created.
+Right click and select "Bridge Connections", it's going to create a network bridge in Windows.
+Now configure your VM :
+
+in the Network part you can activate a new adapter and then select Attached to Host only adapter
+Choose the VirtualBox Host-Only Ethernet adapter you have just created
+You can now configure your static IP Address by modifying /etc/network/interfaces :
