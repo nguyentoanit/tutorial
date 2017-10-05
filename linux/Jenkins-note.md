@@ -7,21 +7,27 @@ Jenkins
 - Agent:
 	+ Directive tells Jenkins where and how to execute the Pipeline.
 	+ Pipeline is designed to easily use Docker images and containers to run inside
-		pipeline {
-	    agent {
-	        docker { image 'node:7-alpine' }
-	    }
-	    stages {
-	        stage('Test') {
-	            steps {
-	                sh 'node --version'
-	            }
-	        }
-	    }
-	}
+		
+        ```
+        pipeline {
+    	    agent {
+    	        docker { image 'node:7-alpine' }
+    	    }
+    	    stages {
+    	        stage('Test') {
+    	            steps {
+    	                sh 'node --version'
+    	            }
+    	        }
+    	    }
+    	}
+        ```
+
 	+ When the Pipeline executes, Jenkins will automatically start the specified container and execute the defined steps within it:
 
-- Example: 
+- Example:
+
+``` 
 pipeline {
     agent any 
     stages {
@@ -56,3 +62,4 @@ pipeline {
         }
     }
 }
+```
