@@ -31,6 +31,7 @@ yum install -y clamav
 ```
 freshclam
 ```
+
     - To check all files on the computer, displaying the name of each file:
 ```
 clamscan -r /
