@@ -25,3 +25,8 @@ There are several reasons for installing reverse proxy servers:
 - Extranet Publishing: a reverse proxy server facing the Internet can be used to communicate to a firewall server internal to an organization, providing extranet access to some functions while keeping the servers behind the firewalls. If used in this way, security measures should be considered to protect the rest of your infrastructure in case this server is compromised, as its web application is exposed to attack from the Internet.
 
 ![Reverse proxy structure](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Reverse_proxy_h2g2bob.svg/280px-Reverse_proxy_h2g2bob.svg.png "Reverse proxy structure")
+
+## REF:
+- https://en.wikipedia.org/wiki/Proxy_server
+- https://en.wikipedia.org/wiki/Reverse_proxy
+- https://en.wikipedia.org/wiki/Open_proxy
