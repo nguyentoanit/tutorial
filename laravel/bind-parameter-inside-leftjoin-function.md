@@ -1,4 +1,4 @@
-# How to Using a variable in join function
+# How to Using a variable in join function in Laravel 5.5
 
 ```
 $tableModel = new tableModel();
