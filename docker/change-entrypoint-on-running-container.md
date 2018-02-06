@@ -25,7 +25,7 @@ Create ```shell_script.sh``` file and write your script:
 echo 'service httpd start' > /usr/local/bin/shell_script.sh
 ```
 
-## Commit running container and build container again using commited container
+## Option 2: Commit running container and build container again using commited container
 
 Use this command to override Entrypoint when you build container:
 
