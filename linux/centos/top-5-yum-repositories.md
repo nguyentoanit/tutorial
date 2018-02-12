@@ -1,6 +1,6 @@
 # Top Yum Repositories for CentOS/RHEL 7/6/5 
 
-YUM ( Yellowdog Updater, Modified ) is a command-line package management utility for RPM-based Linux systems. Yum is useful for RPMs which have dependencies, Yum searches for all dependencies of any RPM in all available repositories. Below list contains top 5 yum repositories (RepoForge, EPEL, REMI, ATrpms, Webtatic) for RHEL based systems with installation links, which we need to keep our system up to date with latest packages. These repositories having most of the RPMs required for servers.
+YUM ( Yellowdog Updater, Modified ) is a command-line package management utility for RPM-based Linux systems. Yum is useful for RPMs which have dependencies, Yum searches for all dependencies of any RPM in all available repositories. Below list contains top yum repositories (RepoForge, EPEL, REMI, ATrpms, Webtatic) for RHEL based systems with installation links, which we need to keep our system up to date with latest packages. These repositories having most of the RPMs required for servers.
 
 ## RPMFusin Repository
 Use following commands to install EPEL yum repository on your CentOS/RHEL 7/6/5 systems.
