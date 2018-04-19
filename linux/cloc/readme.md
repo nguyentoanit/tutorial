@@ -33,7 +33,7 @@ cloc --follow-links /path/to/folder/*
 
 Output example:
 ```
-cloc folder/*
+cloc --follow-links folder/*
       39 text files.
       38 unique files.
       54 files ignored.
