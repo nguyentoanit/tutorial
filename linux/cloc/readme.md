@@ -28,7 +28,7 @@ cloc has many features that make it easy to use, thorough, extensible, and porta
 ## Basic Use
 cloc is a command line program that takes file, directory, and/or archive names as inputs
 ```
-cloc /path/to/folder/*
+cloc --follow-links /path/to/folder/*
 ```
 
 Output example:
