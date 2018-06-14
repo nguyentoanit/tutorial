@@ -1,7 +1,10 @@
 # JavaScript Best Practices
+
 ## Summary
+Avoid global variables,  avoid new,  avoid  ==,  avoid eval()
 
 ## Avoid Global Variables
+
 
 ## Always Declare Local Variables
 
