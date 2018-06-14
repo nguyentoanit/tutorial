@@ -4,7 +4,10 @@
 Avoid global variables,  avoid new,  avoid  ==,  avoid eval()
 
 ## Avoid Global Variables
-
+Minimize the use of global variables.
+This includes all data types, objects, and functions.
+Global variables and functions can be overwritten by other scripts.
+Use local variables instead, and learn how to use closures. 
 
 ## Always Declare Local Variables
 
