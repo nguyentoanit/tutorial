@@ -1,4 +1,6 @@
 # JavaScript Best Practices
+## Summary
+
 ## Avoid Global Variables
 
 ## Always Declare Local Variables
