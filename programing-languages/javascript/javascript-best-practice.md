@@ -10,6 +10,8 @@ Global variables and functions can be overwritten by other scripts.
 Use local variables instead, and learn how to use closures. 
 
 ## Always Declare Local Variables
+All variables used in a function should be declared as local variables.
+Local variables must be declared with the var keyword, otherwise they will become global variables.
 
 ## Declarations on Top
 
