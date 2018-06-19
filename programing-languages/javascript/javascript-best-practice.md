@@ -14,6 +14,41 @@ All variables used in a function should be declared as local variables.
 Local variables must be declared with the var keyword, otherwise they will become global variables.
 
 ## Declarations on Top
+It is a good coding practice to put all declarations at the top of each script or function.
+
+This will:
+- Give cleaner code
+- Provide a single place to look for local variables
+- Make it easier to avoid unwanted (implied) global variables
+- Reduce the possibility of unwanted re-declarations
+
+```
+// Declare at the beginning
+var firstName, lastName, price, discount, fullPrice;
+
+// Use later
+firstName = "John";
+lastName = "Doe";
+
+price = 19.90;
+discount = 0.10;
+
+fullPrice = price * 100 / discount;
+```
+
+This also goes for loop variables:
+
+```
+// Declare at the beginning
+var i;
+
+// Use later
+for (i = 0; i < 5; i++) { 
+
+}
+```
+
+
 
 ## Initialize Variables
 
