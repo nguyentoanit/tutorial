@@ -48,8 +48,6 @@ for (i = 0; i < 5; i++) {
 }
 ```
 
-
-
 ## Initialize Variables
 
 ## Never Declare Number, String, or Boolean Objects
