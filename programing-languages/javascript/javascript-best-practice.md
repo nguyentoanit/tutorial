@@ -49,6 +49,13 @@ for (i = 0; i < 5; i++) {
 ```
 
 ## Initialize Variables
+It is a good coding practice to initialize variables when you declare them.
+This will:
+- Give cleaner code
+- Provide a single place to initialize variables
+- Avoid undefined values
+
+Initializing variables provides an idea of the intended use (and intended data type).
 
 ## Never Declare Number, String, or Boolean Objects
 
