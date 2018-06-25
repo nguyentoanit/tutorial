@@ -58,6 +58,13 @@ This will:
 Initializing variables provides an idea of the intended use (and intended data type).
 
 ## Never Declare Number, String, or Boolean Objects
+Always treat numbers, strings, or booleans as primitive values. Not as objects.
+Declaring these types as objects, slows down execution speed, and produces nasty side effects:
+```
+var x = "John";             
+var y = new String("John");
+(x === y) // is false because x is a string and y is an object. 
+```
 
 ## Don't Use new Object()
 
