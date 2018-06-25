@@ -1,7 +1,6 @@
 # Dbmate
 Dbmate is a database migration tool, to keep your database schema in sync across multiple developers and your production servers. It is a standalone command line tool, which can be used with any language or framework. This is especially helpful if you are writing many services in different languages, and want to maintain some sanity with consistent development tools.
 
-
 ## Usage
 Create configuration file
 
