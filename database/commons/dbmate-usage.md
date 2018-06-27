@@ -12,6 +12,7 @@ Enter connection string
 DATABASE_URL="mysql://username:password@127.0.0.1:3306/test_db"
 
 Create SQL folder
+
 ```
 mkdir sql
 ```
@@ -41,3 +42,8 @@ Rollback migration
 ```
 dbmate -d "./sql" rollback
 ```
+
+Table schema_migrations store history of migration
+
+# Refs:
+- http://dbmate.readthedocs.io/en/latest/
