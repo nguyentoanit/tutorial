@@ -8,16 +8,14 @@ Create configuration file
 vi .env
 ```
 
-Enter connection string
-DATABASE_URL="mysql://username:password@127.0.0.1:3306/test_db"
-
-Create SQL folder
+Enter connection string into configuration file `DATABASE_URL="mysql://username:password@127.0.0.1:3306/test_db"`
+If on your source code there is not a folder which contain SQL files. Please create SQL folder
 
 ```
 mkdir sql
 ```
 
-Create a new migration 
+To create a new migration, use this command
 ```
 dbmate -d "./sql" new test_sql
 ```
