@@ -1,2 +1,3 @@
 # Internet explorer Tips
 ## <meta http-equiv="X-UA-Compatible" content="IE=edge">
+If you are using the X-UA-Compatible META tag you want to place it as close to the top of the page's HEAD as possible. Internet Explorer begins interpreting markup using the latest version. When Internet Explorer encounters the X-UA-Compatible META tag it starts over using the designated version's engine. This is a performance hit because the browser must stop and restart analyzing the content.
