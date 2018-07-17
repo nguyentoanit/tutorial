@@ -121,6 +121,18 @@ Subtracting a string from a string, does not generate an error but returns NaN (
 ```
 
 ## Use === Comparison
+The == comparison operator always converts (to matching types) before comparison.
+The === operator forces comparison of values and type: 
+
+```
+0 == "";        // true
+1 == "1";       // true
+1 == true;      // true
+
+0 === "";       // false
+1 === "1";      // false
+1 === true;     // false 
+```
 
 ## Use Parameter Defaults
 
