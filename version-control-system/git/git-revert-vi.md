@@ -10,6 +10,15 @@ Trước khi Rollback source code, hãy lấy source code mới nhất từ repo
 
 Sau khi đã lấy được code mới nhất từ repository về, dùng lệnh ```git log``` để xem lại danh sách các commit trong quá khứ. Sử dủng phím lên xuống trên bàn phím để di chuyển danh sách commit và **phím q** để thoát.
 
+Sử dụng lệnh git revert để rollback code về những commit mà mình mong muốn theo cú pháp:
+```
+git revert <commit-id>
+```
+
+Ví dụ bạn muốn Rollback code về commit có commit id là 3f16d893407abb67485e143ed1f20378e57c0894, thì sử dụng lệnh:
+```
+git revert 3f16d893407abb67485e143ed1f20378e57c0894
+```
 
 ## Tài liệu tham khảo
 https://stackoverflow.com/questions/2733873/reverting-a-single-file-to-a-previous-version-in-git/8028854
