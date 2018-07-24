@@ -20,5 +20,15 @@ Ví dụ bạn muốn Rollback code về commit có commit id là 3f16d893407abb
 git revert 3f16d893407abb67485e143ed1f20378e57c0894
 ```
 
+Sau khi sử dụng lệnh git revert, sẽ có 2 trường hợp có thể xảy ra:
+
+### Trường hợp 1:
+Việc revert không gặp lỗi gì. Khi đó một cửa sổ hiện ra yêu cầu bạn nhập message cho commit mới. Commit mới này là commit cho việc rollback source code trên máy tính của bạn.
+
+Sau khi nhập message của commit, lưu và thoát khỏi **editor**. (Ví dụ trên máy tính của tôi để lưu và thoát nhấn tổ hợp phím **ctrl+x**)
+
+Sau khi lưu thành công thông báo sẽ hiện ra.
+
+
 ## Tài liệu tham khảo
 https://stackoverflow.com/questions/2733873/reverting-a-single-file-to-a-previous-version-in-git/8028854
