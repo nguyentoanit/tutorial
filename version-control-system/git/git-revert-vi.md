@@ -29,6 +29,18 @@ Sau khi nhập message của commit, lưu và thoát khỏi **editor**. (Ví d�
 
 Sau khi lưu thành công thông báo sẽ hiện ra.
 
+### Trường hợp 2:
+Việc rollback bị lỗi do xung đột giữa code rollback và code hiện tại. Hệ thống sẽ thông báo lỗi: Không thể **revert** do xung đột (**conflict**) source code như trong hình:
+
+Kiểm tra file xem file nào bị conflict bằng lệnh git status
+
+Tiếp đến, mở file bị conflict bằng editor, tìm những đoạn code **<<<<<<< HEAD và >>>>>>>**  Sửa lại các đoạn code bị conflict mà mình mong muốn và lưu lại.
+
+Sau khi đã sửa hết conflict trên các file, mở terminal dùng lệnh ```git add``` thêm các file đã sửa **conflict** vào **stage area**. 
+
+Tiếp theo, sử dụng ```git revert --continue``` để xác nhận việc sửa conflict hoàn thành và tiếp tục việc rollback code. Lúc này một cửa sổ hiện ra, bạn nhập message cho commit mới. Commit mới này là commit cho việc rollback source code trên máy tính của bạn. (Giống như trường hợp 1 đã nhắc đến ở bên trên)
+
+Commit thành công là việc rollback source code đã gần như hoàn thành. Tiếp đến để những rollback source code có hiệu lực trên server, bạn phải push toàn bộ rollback code lên Git repository. Merge nhánh rollback vào nhánh cần rollback, đăng nhập vào server bằng SSH và pull source code mới nhất từ repository
 
 ## Tài liệu tham khảo
 https://stackoverflow.com/questions/2733873/reverting-a-single-file-to-a-previous-version-in-git/8028854
