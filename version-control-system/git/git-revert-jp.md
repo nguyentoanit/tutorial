@@ -1,6 +1,6 @@
 # Git Manual Rollback
-## Tổng quan
-Tài liệu này mô tả hướng dẫn rollback source code trên git bằng command line. Việc rollback không xóa commit cũ.
+## 概要
+Gitにてコマンドラインでソースコードをロールバックする手順を記載するものです。既存コミットを削除しないで、ロールバックを実行することです。
 
 ## Yêu cầu
 Tải và cài đặt Git ([download](https://git-scm.com/downloads)) trên máy.
