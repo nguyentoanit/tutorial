@@ -2,8 +2,8 @@
 ## 概要
 Gitにてコマンドラインでソースコードをロールバックする手順を記載するものです。既存コミットを削除しないで、ロールバックを実行することです。
 
-## Yêu cầu
-Tải và cài đặt Git ([download](https://git-scm.com/downloads)) trên máy.
+## 前提条件
+Gitをインストールしてください。（[ダウンロード](https://git-scm.com/downloads)）
 
 ## Hướng dẫn Rollback source code trên Git
 Trước khi Rollback source code, hãy lấy source code mới nhất từ repository và switch (chuyển) sang nhánh (**branch**) cần rollback. Sử dụng lệnh ```git pull``` để lấy source code mới nhất và git checkout để chuyển nhánh trên **terminal**. Để an toàn hơn cho việc rollback, Tiến hành tạo một nhánh mới (nhánh rollback) từ nhanh cần rollback. Ví dụ ```git checkout -b rollback-1 master```. Nhánh sẽ tạo tên là **rollback-1**. Nhánh **rollback-1** được tạo từ nhánh **master** (nhánh cần rollback)
