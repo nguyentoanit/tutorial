@@ -21,3 +21,5 @@ xxxxx-json.log  checkpoints	config.v2.json	hostconfig.json  hostname  hosts  res
 ```
 
 Change content of `config.v2.json` and `hostconfig.json` to change mount volumn, mount ports and expose ports
+
+Finally, Restart docker service and docker container.
