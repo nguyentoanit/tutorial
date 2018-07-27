@@ -6,21 +6,24 @@ Gitにてコマンドラインでソースコードをロールバックする�
 Gitをインストールしてください。（[ダウンロード](https://git-scm.com/downloads)）
 
 ## Gitにてソースコードをロールバックする手順
-Trước khi Rollback source code, hãy lấy source code mới nhất từ repository và switch (chuyển) sang nhánh (**branch**) cần rollback. Sử dụng lệnh ```git pull``` để lấy source code mới nhất và git checkout để chuyển nhánh trên **terminal**. Để an toàn hơn cho việc rollback, Tiến hành tạo một nhánh mới (nhánh rollback) từ nhanh cần rollback. Ví dụ ```git checkout -b rollback-1 master```. Nhánh sẽ tạo tên là **rollback-1**. Nhánh **rollback-1** được tạo từ nhánh **master** (nhánh cần rollback)
+ソースコードのロールバックを実行する前に、リポジトリからの最新ソースコードを収得して、ロールバックブランチへ切り替える。最新ソースコードを収得するように`git pull`文を、ターミナルにブランチを切り替えるように`git checkout`文を使用する。ロールバックを正常に保障するので、ロールバックブランチにて新しいブランチを作成することになる。
+例：`git checkout -b rollback-1 master`
+新しいブランチ：**rollback-1**、ロールバックブランチ：**master**。
+**master**ブランチから**rollback-1**ブランチを作成するということです。
 
-Sau khi đã lấy được code mới nhất từ repository về, dùng lệnh ```git log``` để xem lại danh sách các commit trong quá khứ. Sử dủng phím lên xuống trên bàn phím để di chuyển danh sách commit và **phím q** để thoát.
+リポジトリからの最新コードを収得してから、過去コミットを再確認するので`git log`文を使用することになる。コミットリスト中に移動できるように「↓↑」キーボードを、抜け出すように「q」のキーボードを、利用することになる。
 
-Sử dụng lệnh git revert để rollback code về những commit mà mình mong muốn theo cú pháp:
+必要なコミットのコードをロールバックするので、git revert文で以下のように使用するのとになる。
 ```
 git revert <commit-id>
 ```
 
-Ví dụ bạn muốn Rollback code về commit có commit id là 3f16d893407abb67485e143ed1f20378e57c0894, thì sử dụng lệnh:
+例：3f16d893407abb67485e143ed1f20378e57c0894というコミットIDをロールバックする場合、以下の文を実行してください。
 ```
 git revert 3f16d893407abb67485e143ed1f20378e57c0894
 ```
 
-Sau khi sử dụng lệnh git revert, sẽ có 2 trường hợp có thể xảy ra:
+git revert文利用場合：２つケースが有効になっている。
 
 ### Trường hợp 1:
 Việc revert không gặp lỗi gì. Khi đó một cửa sổ hiện ra yêu cầu bạn nhập message cho commit mới. Commit mới này là commit cho việc rollback source code trên máy tính của bạn.
