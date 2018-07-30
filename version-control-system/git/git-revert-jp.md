@@ -25,7 +25,7 @@ git revert 3f16d893407abb67485e143ed1f20378e57c0894
 
 git revert文利用場合：２つケースが有効になっている。
 
-### Trường hợp 1:
+### ケース１：
 Việc revert không gặp lỗi gì. Khi đó một cửa sổ hiện ra yêu cầu bạn nhập message cho commit mới. Commit mới này là commit cho việc rollback source code trên máy tính của bạn.
 
 Sau khi nhập message của commit, lưu và thoát khỏi **editor**. (Ví dụ trên máy tính của tôi để lưu và thoát nhấn tổ hợp phím **ctrl+x**)
