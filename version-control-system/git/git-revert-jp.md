@@ -26,11 +26,11 @@ git revert 3f16d893407abb67485e143ed1f20378e57c0894
 git revert文利用場合：２つケースが有効になっている。
 
 ### ケース１：
-Việc revert không gặp lỗi gì. Khi đó một cửa sổ hiện ra yêu cầu bạn nhập message cho commit mới. Commit mới này là commit cho việc rollback source code trên máy tính của bạn.
+元に戻すこと（revert）は通常に実行するになると、新しいコミットのメッセージを入力するウィンドウズが表示されている。このコミットはPCへソースコードをロールバックするものです。
 
-Sau khi nhập message của commit, lưu và thoát khỏi **editor**. (Ví dụ trên máy tính của tôi để lưu và thoát nhấn tổ hợp phím **ctrl+x**)
+メッセージ入力済み後、エディターを抜け出すことになる。（例：私のPCに対して、「ctrl+x」を押すことです）。
 
-Sau khi lưu thành công thông báo sẽ hiện ra.
+保存が完了したメッセージが表示されていることです。
 
 ### Trường hợp 2:
 Việc rollback bị lỗi do xung đột giữa code rollback và code hiện tại. Hệ thống sẽ thông báo lỗi: Không thể **revert** do xung đột (**conflict**) source code như trong hình:
