@@ -33,17 +33,20 @@ git revert文利用場合：２つケースが有効になっている。
 保存が完了したメッセージが表示されていることです。
 
 ### ケース２：
-Việc rollback bị lỗi do xung đột giữa code rollback và code hiện tại. Hệ thống sẽ thông báo lỗi: Không thể **revert** do xung đột (**conflict**) source code như trong hình:
+ロールバックコードと既存コードの間にコンフリクトが発生すれば、ロールバックはエラーになっているということです。
 
-Kiểm tra file xem file nào bị conflict bằng lệnh git status
+エラーメッセージ：ソースコードはコンフリクトになっているので、元に戻すことが出来ないです。
 
-Tiếp đến, mở file bị conflict bằng editor, tìm những đoạn code **<<<<<<< HEAD và >>>>>>>**  Sửa lại các đoạn code bị conflict mà mình mong muốn và lưu lại.
+git status文でコンフリクトになっているファイルを確認することです。
 
-Sau khi đã sửa hết conflict trên các file, mở terminal dùng lệnh ```git add``` thêm các file đã sửa **conflict** vào **stage area**. 
+エディターでコンフリクトファイルを開いて、「<<<<<<< HEAD」と「>>>>>>>」というコンフリクトになっているコードラインを確認・修正・保存することです。
 
-Tiếp theo, sử dụng ```git revert --continue``` để xác nhận việc sửa conflict hoàn thành và tiếp tục việc rollback code. Lúc này một cửa sổ hiện ra, bạn nhập message cho commit mới. Commit mới này là commit cho việc rollback source code trên máy tính của bạn. (Giống như trường hợp 1 đã nhắc đến ở bên trên)
+コンフリクト修正済み後、ターミナルを開いて、ステージエリアにコンフリクト修正ファイルをgit add文で追加することです。
 
-Commit thành công là việc rollback source code đã gần như hoàn thành. Tiếp đến để những rollback source code có hiệu lực trên server, bạn phải push toàn bộ rollback code lên Git repository. Merge nhánh rollback vào nhánh cần rollback, đăng nhập vào server bằng SSH và pull source code mới nhất từ repository
+次は、コンフリクト修正完了とロールバックコード実装継続を確認できるように、git revert --continue文を利用することです。この時点の表示されているウィンドウズに新しいコミットのメッセージを入力するになる。このコミットはソースコードロールバックのものです。（ケース１と同様になる）。
 
-## Tài liệu tham khảo
+コミット完了のはソースコードロールバックがほぼ完了するという意味です。
+サーバーにロールバックソースコードは有効になるために、Gitリポジトリへロールバックコードをプッシュして、ロールバックブランチ先にロールバックブランチをマージして、SSHでサーバーをアクセスして、リポジトリからの最新ソースコードをプルする必要です。
+
+## REFERENCES
 https://stackoverflow.com/questions/2733873/reverting-a-single-file-to-a-previous-version-in-git/8028854
