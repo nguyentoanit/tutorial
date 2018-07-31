@@ -32,7 +32,7 @@ git revert文利用場合：２つケースが有効になっている。
 
 保存が完了したメッセージが表示されていることです。
 
-### Trường hợp 2:
+### ケース２：
 Việc rollback bị lỗi do xung đột giữa code rollback và code hiện tại. Hệ thống sẽ thông báo lỗi: Không thể **revert** do xung đột (**conflict**) source code như trong hình:
 
 Kiểm tra file xem file nào bị conflict bằng lệnh git status
