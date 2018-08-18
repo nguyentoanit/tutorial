@@ -11,4 +11,11 @@ Allow this file can execute
 chmod +x myapp
 ```
 
+Using this form to interact with Linux
 
+```
+#!/usr/bin/php
+<?php
+//Your code
+?>
+```
