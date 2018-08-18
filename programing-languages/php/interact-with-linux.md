@@ -24,7 +24,7 @@ Run file with command
 
 ## A few common variable
 - $argv: Array of arguments passed to script
-- 
+- shell_exec function: Execute command via shell and return the complete output as a string
 
 # References
 - http://php.net/manual/en/reserved.variables.argv.php
