@@ -21,3 +21,11 @@ Run file with command
 ```
 ./myapp
 ```
+
+## A few common variable
+- $argv: Array of arguments passed to script
+- 
+
+# References
+- http://php.net/manual/en/reserved.variables.argv.php
+- http://php.net/manual/en/function.shell-exec.php
