@@ -1,4 +1,4 @@
-Jenkins
+# Jenkins Pipeline
 - Write jenkinsfile  to decribe about steps
 - In jenkinsfile define stage (Build, Test, Deploy):
 	+ Stage: Write shell script to build, test or deploy
@@ -63,3 +63,10 @@ pipeline {
     }
 }
 ```
+
+# Jenkins Project
+- Install ant php
+- Install liblary of php
+- Create file buil.xml on root folder of project
+- Change permission for build folder
+
