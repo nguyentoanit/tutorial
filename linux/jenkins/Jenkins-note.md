@@ -69,4 +69,3 @@ pipeline {
 - Install liblary of php
 - Create file buil.xml on root folder of project
 - Change permission for build folder
-
