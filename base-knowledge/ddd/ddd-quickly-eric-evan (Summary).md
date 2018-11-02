@@ -47,4 +47,6 @@ Phân chia làm 4 tầng logic:
 - Application( Tầng ứng dụng) : Phối hợp các xử lý. Lưu ý là không chứa logic nghiệp vụ ở đây
 - Domain (Tầng nghiệp vụ) : Phần này là trái tim của phần mềm, chứa các mô hình biểu diễn nghiệp vụ của hệ thống. Thể hiện logic của nghiệp vụ nhưng uỷ quyền việc cài đặt chi tiết cho Infra. Đây là tầng quan trọng nhất
 - Infrastructure( Tầng nền) : Cung cấp các gói hỗ trợ, liên lạc, cài đặt chi tiết, sử dụng các thư viện bên ngoài
-- 
+
+# References
+- https://labs.septeni-technology.jp/design-2/domain-driven-design/domain-driven-design-cho-moi-nguoi/
