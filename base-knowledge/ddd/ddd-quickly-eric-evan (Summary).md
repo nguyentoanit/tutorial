@@ -24,3 +24,21 @@ Theo thời gian thì các thuộc tính này đều có thể thay đổi, đư
 
 - Để đảm bảo điều này, các lập trình viên sẽ dùng một ID để xác định cho Entity, ID này là duy nhất, xuyên suốt vòng đời của một đối tượng là Entity.
 - Xác định một đối tượng trong mô hình là entity sẽ có các hệ quả quan trọng liên quan đến vòng đời và tương tác của entity đó như: Về cài đặt việc so sánh hai đối tượng entity không được so sánh dựa trên các thuộc tính của nó mà dựa trên ID. Entity có thể thay đổi thuộc tính theo thời gian (mutual) nên không dùng nó để trao đổi thông tin giữa các xử lý; với entity thì cần chú tâm vào cách hàng xử lý nó (behavior) hơn là dữ liệu.
+
+#### Value Object
+Value Object mô tả đặc điểm, thuộc tính của đối tượng
+Trong ví dụ trên thì name, age, address, hay position đều là các Value Object
+
+#### Dịch vụ (Service)
+
+#### Module
+
+#### Aggregate
+
+#### Factory
+
+#### Repository
+Repository là kho chứa cho bạn lấy ra hay lưu lại các aggregate. 
+Repository là khái niệm thuộc tầng domain không quan tâm đến kỹ thuật, phương tiện lưu trữ(memory hay db..).
+
+## Kiến trúc ứng dụng dùng DDD
