@@ -16,4 +16,11 @@ Mục đích của quá trình mô hình hóa là nhằm tạo ra một model t�
 Lập trình hướng đối tượng là phù hợp để cài đặt model vì chúng cùng có chung mô hình. Lập trình hướng đối tượng cung cấp các class của đối tượng và liên kết giữa các class, các biểu hiện của đối tượng, cùng thông điệp giữa chúng. Ngôn ngữ OOP khiến chúng có khả năng tạo ánh xạ trực tiếp giữa đối tượng model và quan hệ và gắn kế của chúng.
 
 ### Các thành phần cơ bản để xây dựng mô hình 
+#### Thực thể (Entity)
+Dùng để biểu thị sự tồn tại của thực thể liên tục xuyên suốt, dù các thuộc tính có thay đổi
 
+**Ví dụ**: với một hệ thống quản lý nhân sự, đối tượng nhân viên Employee có các thuộc tính như name, age, address, position. 
+Theo thời gian thì các thuộc tính này đều có thể thay đổi, được cập nhật, tuy nhiên hệ thống vẫn cần nhận diện 1 nhân viên vẫn là nhân viên đó dù đã cập nhật tuổi, vị trí hay địa chỉ cư trú, hay cả tên cho anh ta trong hoạt động lưu vết cho 1 cá nhân. Vậy Employee cần được xác định là 1 entity.
+
+- Để đảm bảo điều này, các lập trình viên sẽ dùng một ID để xác định cho Entity, ID này là duy nhất, xuyên suốt vòng đời của một đối tượng là Entity.
+- Xác định một đối tượng trong mô hình là entity sẽ có các hệ quả quan trọng liên quan đến vòng đời và tương tác của entity đó như: Về cài đặt việc so sánh hai đối tượng entity không được so sánh dựa trên các thuộc tính của nó mà dựa trên ID. Entity có thể thay đổi thuộc tính theo thời gian (mutual) nên không dùng nó để trao đổi thông tin giữa các xử lý; với entity thì cần chú tâm vào cách hàng xử lý nó (behavior) hơn là dữ liệu.
