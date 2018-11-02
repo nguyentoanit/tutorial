@@ -42,3 +42,9 @@ Repository là kho chứa cho bạn lấy ra hay lưu lại các aggregate.
 Repository là khái niệm thuộc tầng domain không quan tâm đến kỹ thuật, phương tiện lưu trữ(memory hay db..).
 
 ## Kiến trúc ứng dụng dùng DDD
+Phân chia làm 4 tầng logic:
+- UI( Tầng giao diện) : chịu trách nhiệm cho hiển thị thông tin, nhận lệnh từ người dùng
+- Application( Tầng ứng dụng) : Phối hợp các xử lý. Lưu ý là không chứa logic nghiệp vụ ở đây
+- Domain (Tầng nghiệp vụ) : Phần này là trái tim của phần mềm, chứa các mô hình biểu diễn nghiệp vụ của hệ thống. Thể hiện logic của nghiệp vụ nhưng uỷ quyền việc cài đặt chi tiết cho Infra. Đây là tầng quan trọng nhất
+- Infrastructure( Tầng nền) : Cung cấp các gói hỗ trợ, liên lạc, cài đặt chi tiết, sử dụng các thư viện bên ngoài
+- 
