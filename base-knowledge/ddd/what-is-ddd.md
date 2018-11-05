@@ -19,3 +19,11 @@ Khi đã có mô hình, chúng ta bắt đầu thiết kế mã nguồn. Vẽ l�
 Cần trao đổi, đặt những câu hỏi đúng về nội dung và cách thức để có thể lấy được nhiều thông tin từ các domain expert (những chuyên gia về nghiệp vụ).
 
 Từ những thông tin đã khai thác được, qua quá trình tổng hợp, dần dần sẽ xây dựng được một mô hình cho domain.
+
+# Sử dụng ngôn ngữ chung
+Giữa lập trình viên và domain expert luôn có những rào cản giao tiếp cơ bản. Lập trình viên chỉ nghĩ tới lớp, method, thuật toán, pattern và có khuynh hướng diễn tả mọi thứ đời thường bằng những thao tác lập trình.
+Tuy vậy những chuyên gia domain không thể hiểu được điều này.
+
+Dự án sẽ trở nên nghiêm trọng nếu các thành viên không sử dụng chung ngôn ngữ khi trao đổi về domain.
+
+Nên tạo ra các mô hình để mô tả về những nghiệp vụ dùng trong dự án. Khi đó mọi người sẽ dùng chung một ngôn ngữ và có thể hiểu đúng và nội dung đối phương đang nói một cách tốt hơn.
