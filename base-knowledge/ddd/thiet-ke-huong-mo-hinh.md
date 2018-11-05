@@ -21,3 +21,30 @@ Giải pháp kiến trúc cho DDD:
 Điều quan trọng là phải phân chia một ứng dụng ra nhiều lớp riêng biệt, và thiết lập các quy tắc tương tác giữa các lớp với nhau. 
 
 Nếu các đoạn code không được phân chia rõ ràng thành các lớp như trên, thì nó sẽ sớm trở nên vướng víu khiến vô cùng khó khăn cho việc quản lý các thay đổi.
+
+### Thực thể (Entity)
+Là nhóm đối tượng có định danh riêng, những định danh này được giữ xuyên xuốt quá trình sử dụng phần mềm.
+
+## Value Object 
+Là những đối tượng mà ta không cần quan tâm đến định danh của đối tượng đó, mà chỉ quan tâm đến thuộc tính của đối tượng đó. 
+
+> Ví dụ: Các điểm trên một màn hình. Ta chỉ cần quan tâm đến toạ độ x,y (thuộc tính) của điểm đó mà không cần quan tâm đến định danh của đối tượng đó.
+
+Entity thì có thể thay đổi được còn Value Object thì không. Khi muốn thay đổi giá trị của 1 Value Object thì ta phải tạo một đối tượng mới chứ không phải thay đổi thuộc tính của đối tượng cũ.
+
+Do Value Object không thể thay đổi và không có định danh nên có thể dùng chung.
+
+## Dịch vụ (Service)
+Khi thiết lập Ngôn ngữ chung, các khái niệm chính của domain sẽ được thể hiện trong Ngôn ngữ chung này, các *danh từ* sẽ là các *đối tượng*, các *động từ* đi kèm với danh từ đó sẽ thành các *hành vi của đối tượng*. Tuy nhiên có một số hành vi lại có vẻ không thuộc về một đối tượng nhất định nào cả.
+
+Ví dụ như việc chuyển tiền từ một tài khoản này sang một tài khoản khác, chức năng này nên đặt ở tài khoản gửi hay tài khoản nhận? Trong trường hợp này cả hai đều không phù hợp.
+
+Đối với những hành vi như vậy trong domain, cách tốt nhất là khai báo chúng như là một Dịch vụ.
+
+Một Dịch vụ không có trạng thái nội tại và nhiệm vụ của nó đơn giản là cung cấp các chức năng cho domain. 
+
+Chúng có thể bao gồm các chức năng liên quan đến nhau để hỗ trợ cho các Thực thể (Entity) và các Value Object.
+
+Khi nói về một dịch vụ, người ta không quan tâm đến đối tượng thực hiện mà quan tâm tới những đối tượng được xử lý bởi dịch vụ. Một Dịch vụ không nên bao gồm các thao tác vốn thuộc về các đối tượng của domain.
+
+## Module
