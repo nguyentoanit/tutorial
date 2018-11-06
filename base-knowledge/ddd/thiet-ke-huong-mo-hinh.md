@@ -47,4 +47,26 @@ Chúng có thể bao gồm các chức năng liên quan đến nhau để hỗ t
 
 Khi nói về một dịch vụ, người ta không quan tâm đến đối tượng thực hiện mà quan tâm tới những đối tượng được xử lý bởi dịch vụ. Một Dịch vụ không nên bao gồm các thao tác vốn thuộc về các đối tượng của domain.
 
-## Module
+## Module (mô-đun)
+Là một phần của chương trình được đặt theo cấu trúc hoặc chức năng. Module được dùng như phương pháp để tổ chức các khái niệm và tác vụ liên quan nhằm giảm độ phức tạp.
+
+Sẽ dễ dàng hơn để hình dung mô hình lớn nếu ta nhìn vào những mô-đun chứa trong mô hình đó, sau đó là quan hệ giữa các mô-đun.
+
+Chúng ta nên nhóm những lớp có mức độ liên quan cao thành một mô-đun để đạt được tính tương liên cao nhất có thể.
+
+## Aggregate (tập hợp) 
+Aggregate (tập hợp) là pattern để định nghĩa việc sở hữu đối tượng và phân cách giữa chúng. (tổng hợp các entities và các value objects )
+
+Factory và Repository là hai pattern khác giúp quản lý việc tạo và lưu trữ đối tượng
+
+Một Aggregate là một nhóm các đối tượng, nhóm này có thể được xem như là một đơn vị thống nhất đối với các thay đổi dữ liệu. 
+
+Mỗi Aggregate có một "gốc", đó là một Thực thể và cũng là đối tượng duy nhất có thể truy cập từ phía ngoài của Aggregate. Gốc của Aggregate có thể chứa những tham chiếu đến các đối tượng khác trong Aggregate, và những đối tượng trong này có thể chứa tham chiếu đến nhau, nhưng các đối tượng ở ngoài chỉ có thể tham chiếu đến gốc.
+
+Aggregate root như 1 entrypoint để các đối tượng khác có thể tham chiếu đến. Tất cả các thay đổi của Aggregate sẽ thực hiện thông qua gốc của chúng. Chúng ta có thể quản lý được những thay đổi này, so với khi thiết kế cho phép các đối tượng bên ngoài truy cập trực tiếp đối tượng bên trong. Aggregate bị xóa và loại bỏ khỏi bộ nhớ thì những đối tượng khác trong Aggregate cũng sẽ bị xóa.
+
+> Vẫn có thể tham chiếu tạm thời đến các đối tượng trong aggregate miễn là những tham chiếu này được xoá sau khi hoàn thành thao tác.
+
+> Một trong những cách thực hiện điều này là sao chép các Value Object cho các đối tượng ngoài.
+
+
