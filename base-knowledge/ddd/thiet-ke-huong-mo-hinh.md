@@ -69,4 +69,25 @@ Aggregate root như 1 entrypoint để các đối tượng khác có thể tham
 
 > Một trong những cách thực hiện điều này là sao chép các Value Object cho các đối tượng ngoài.
 
+## Factory
+Sẽ có trường hợp gặp những những Entity, Aggregate lớn và phức tạp. Chúng ta không thể khởi tạo trong constructor.
+
+Factory Là pattern dùng để khởi tạo những Entity, Aggregate lớn và phức tạp đó.
+
+Chia Factory ra làm 2 loại: 
+-  Factory Phương pháp
+-  Factory Trừu tượng
+
+Một Factory Phương pháp là một phương pháp đối tượng chứa và ẩn kiến thức cần thiết để tạo ra một đối tượng khác. 
+
+Điều này rất hữu dụng khi client muốn tạo một đối tượng thuộc về một Aggregate. Giải pháp là thêm một method tới gốc của Aggregate. Method này sẽ đảm nhiệm việc tạo ra đối tượng, đảm bảo mọi điều kiện bất biến, trả về một tham chiếu tới đối tượng đó hoặc một bản copy tới nó.
+
+Factory cho Entity và Value Object là khác nhau.
+
+Factory không thực sự cần thiết và chỉ cần một constructor là đủ khi:
+- Việc khởi tạo không quá phức tạp.
+- Việc tạo ra một đối tượng không liên quan đến việc tạo ra các đối tượng khác, và toàn bộ thuộc tính cần thiết được truyền thông qua constructor
+- Client quan tâm đến việc cài đặt. Bạn có thể dùng Strategy
+- Class là một loại. Không có sự phân cấp liên quan, vì vậy không cần phải lựa chọn giữa một danh sách triển khai cụ thể
+
 
