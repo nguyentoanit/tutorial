@@ -94,3 +94,84 @@ Factory không thực sự cần thiết và chỉ cần một constructor là �
 Là một công cụ quản lý và thu thập các tham chiếu tới domain.
 
 Repository có thể lưu trữ các tham chiếu tới một vài đối tượng. Khi một đối tượng được khởi tạo, nó có thể được lưu lại trong Repository, và được lấy ra từ đây để có thể sử dụng sau này. Nếu phía client yêu cầu đối tượng từ Repository và Repository không chứa chúng, nó có thể sẽ được lấy từ bộ nhớ. Dù bằng cách nào, các Repository hoạt động như một nơi lưu trữ các đối tượng cho việc truy xuất đối tượng toàn cục. 
+
+# Một cái nhìn sâu hơn về tái cấu trúc
+## Tái cấu trúc liên tục
+Tái cấu trúc là quá trình thiết kế lại mã nguồn, làm cho nó tốt hơn mà không thay đổi chương trình ứng dụng. Tái cấu trúc thường được thực hiện trong phạm vi nhỏ, các bước kiểm soát được để không phá vỡ chức năng hoặc tạo thêm lỗi
+
+Mục đích của tái cấu trúc là làm cho mã nguồn tốt hơn. Các phương pháp Kiểm thử Tự động đóng vai trò quan trọng để đảm bảo chất lượng của tái cấu trúc.
+
+## Giới thiệu các Khái niệm
+Tái cấu trúc được thực hiện từng bước nhỏ. Kết quả này cũng là một loạt các cải tiến nhỏ. Có những lúc rất nhiều thay đổi nhỏ tạo ra một sự thay đổi lớn mang tính đột phá.
+
+Để đạt được một bước đột phá, chúng ta cần phải đưa ra các khái niệm rõ ràng. Khi chúng ta nói chuyện với các chuyên gia lĩnh vực, chúng ta trao đổi rất nhiều ý tưởng và kiến thức. Một số khái niệm tạo nên Ngôn ngữ chung, nhưng một số còn chưa được chú ý ngay từ đầu. Chúng là những **khái niệm ẩn**, được sử dụng để giải thích các khái niệm đã có trong mô hình.
+
+Không nên có khái niệm ẩn như vậy. Nếu chúng là những khái niệm lĩnh vực, chúng nên có mặt trong mô hình và thiết kế. 
+
+Có 1 vài khái niệm rất hữu ích khi nó được thể hiện 1 cách rõ ràng:
+- Ràng buộc (Constraint)
+-  Qui trình(Process)
+-  Đặc tả (Specification)
+
+Một ràng buộc là một cách đơn giản để thể hiện cái gì đó bất biến. Điều này được thực hiện bằng cách đặt logic không thay đổi vào ràng buộc
+
+```
+public class Bookshelf {
+    private int capacity = 20;
+    private Collection content;
+    public void add(Book book) {
+        if (content.size() + 1 <= capacity) {
+        content.add(book);
+        } else {
+            throw new IllegalOperationException(“The bookshelf has reached its limit.”);
+        }
+    }
+}
+```
+
+Chúng ta có thể tái cấu trúc bằng cách tách ràng buộc thành một method riêng:
+
+```
+public class Bookshelf {
+    private int capacity = 20;
+    private Collection content;
+    public void add(Book book) {
+        if (isSpaceAvailable()) {
+        content.add(book);
+        } else {
+            throw new IllegalOperationException(“The bookshelf has reached its limit.”);
+        }
+    }
+    private boolean isSpaceAvailable() {
+        return content.size() < capacity;
+    }
+}
+```
+
+Qui trình(Process) thường được thể hiện trong mã nguồn với các thủ tục. Chúng ta sẽ không sử dụng cách tiếp cận thủ tục khi có ngôn ngữ hướng đối tượng, vì vậy chúng ta cần xác định đối tượng và các hành vi liên quan. Cách tốt nhất để thực hiện quá trình này là sử dụng *Service*
+
+# Duy trì Tính Toàn vẹn của Mô hình
+## Ngữ cảnh Giới hạn
+## Tích hợp Liên tục
+Chúng ta cần quy trình tích hợp để đảm bảo rằng mọi phần tử được thêm vào một cách hài hòa trong toàn bộ phần còn lại của mô hình và được thực thi đúng trong mã nguồn.
+
+Chúng ta cần có một thủ tục khi merge mã nguồn. Merge mã nguồn càng sớm càng tốt. Với một nhóm nhỏ, nên merge hàng ngày.
+
+## Ngữ cảnh Ánh xạ
+
+## Khách hàng - Nhà cung cấp
+Nhiều trường hợp khi hai hệ thống con có quan hệ đặc biệt: Một hệ thống phụ thuộc rất nhiều vào hệ thống còn lại. Ngữ cảnh khi hai hệ thống con tồn tại độc lập, và kết quả xử lý của một hệ thống được truyền đến hệ thống kia. Chúng không có Nhân chung vì chúng có thể không thể có nhân chung đúng khái niệm, hoặc không thể tạo được mã nguồn chia sẻ chung cho hai hệ thống con vì lý do kỹ thuật nào đó. Trường hợp này, ta gọi hai hệ thống con là có quan hệ Khách hàng - Nhà cung cấp.
+
+Mô hình này chạy tốt khi nhóm có chung quản lý - giúp quá trình đưa ra quyết định dễ hơn, tạo ra sự hài hòa.
+
+Nhóm khách hàng cũng cần cung cấp kiến thức và đầu vào cho
+nhóm Cung cấp
+
+## Chủ nghĩa Thủ cựu (Conformist)
+
+## Lớp chống Đổ vỡ
+Chúng ta thường xuyên gặp tình huống viết một chương trình mới tương tác với phần mềm cũ hoặc phần mềm độc lập. 
+
+Đây là một thử thách khác với người vẽ mô hình domain. Nhiều phần mềm cũ không được xây dựng với kỹ thuật mô hình domain và bản thân mô hình của họ lộn xộn, khó hiểu và khó làm.
+
+Có nhiều cách để hệ thống khách của chúng ta tương tác với hệ thống ngoài. Một trong những cách đó là kết nối mạng. Cả hai chương trình cần dùng chung giao thức mạng, và client cần tuân theo giao diện được cung cấp bởi hệ thống ngoài. Một phương pháp khác là tương tác với CSDL. Hệ thống ngoài tác động và lưu dữ liệu vào CSDL.
