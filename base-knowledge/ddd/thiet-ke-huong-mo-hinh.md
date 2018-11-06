@@ -90,4 +90,7 @@ Factory không thực sự cần thiết và chỉ cần một constructor là �
 - Client quan tâm đến việc cài đặt. Bạn có thể dùng Strategy
 - Class là một loại. Không có sự phân cấp liên quan, vì vậy không cần phải lựa chọn giữa một danh sách triển khai cụ thể
 
+## Repository
+Là một công cụ quản lý và thu thập các tham chiếu tới domain.
 
+Repository có thể lưu trữ các tham chiếu tới một vài đối tượng. Khi một đối tượng được khởi tạo, nó có thể được lưu lại trong Repository, và được lấy ra từ đây để có thể sử dụng sau này. Nếu phía client yêu cầu đối tượng từ Repository và Repository không chứa chúng, nó có thể sẽ được lấy từ bộ nhớ. Dù bằng cách nào, các Repository hoạt động như một nơi lưu trữ các đối tượng cho việc truy xuất đối tượng toàn cục. 
