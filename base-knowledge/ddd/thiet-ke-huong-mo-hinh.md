@@ -158,7 +158,6 @@ Chúng ta cần quy trình tích hợp để đảm bảo rằng mọi phần t�
 Chúng ta cần có một thủ tục khi merge mã nguồn. Merge mã nguồn càng sớm càng tốt. Với một nhóm nhỏ, nên merge hàng ngày.
 
 ## Ngữ cảnh Ánh xạ
-
 ## Khách hàng - Nhà cung cấp
 Nhiều trường hợp khi hai hệ thống con có quan hệ đặc biệt: Một hệ thống phụ thuộc rất nhiều vào hệ thống còn lại. Ngữ cảnh khi hai hệ thống con tồn tại độc lập, và kết quả xử lý của một hệ thống được truyền đến hệ thống kia. Chúng không có Nhân chung vì chúng có thể không thể có nhân chung đúng khái niệm, hoặc không thể tạo được mã nguồn chia sẻ chung cho hai hệ thống con vì lý do kỹ thuật nào đó. Trường hợp này, ta gọi hai hệ thống con là có quan hệ Khách hàng - Nhà cung cấp.
 
@@ -168,7 +167,6 @@ Nhóm khách hàng cũng cần cung cấp kiến thức và đầu vào cho
 nhóm Cung cấp
 
 ## Chủ nghĩa Thủ cựu (Conformist)
-
 ## Lớp chống Đổ vỡ
 Chúng ta thường xuyên gặp tình huống viết một chương trình mới tương tác với phần mềm cũ hoặc phần mềm độc lập. 
 
@@ -177,3 +175,10 @@ Chúng ta thường xuyên gặp tình huống viết một chương trình mớ
 Có nhiều cách để hệ thống khách của chúng ta tương tác với hệ thống ngoài. Một trong những cách đó là kết nối mạng. Cả hai chương trình cần dùng chung giao thức mạng, và client cần tuân theo giao diện được cung cấp bởi hệ thống ngoài. Một phương pháp khác là tương tác với CSDL. Hệ thống ngoài tác động và lưu dữ liệu vào CSDL.
 
 Có rủi ro cho mô hình ngoài khi thay đổi mô hình của client nếu ta cho phép điều đó xảy ra. Chúng ta không thể bỏ qua sự tương tác với mô hình ngoài, nhưng chúng ta cần cẩn thận và cô lập hóa mô hình của chúng ta khỏi mô hình đó. Chúng ta cần xây dựng một **Lớp chống lại sự đổ vỡ** đứng giữa mô hình client và mô hình của hệ thống ngoài.
+
+## Dịch vụ Host mở
+Khi một hệ thống con phải tích hợp với nhiều hệ thống khác, việc tùy biến một trình phiên dịch cho mỗi chúng có thể làm cả nhóm sa lầy. Chúng ta phải bào trì ngày càng nhiều, phải lo lắng nhiều và nhiều hơn nữa khi có thay đổi. Giải pháp là xem hệ thống con ngoài như một bên cung cấp dịch vụ.
+
+Định nghĩa một giao thức cho phép truy cập tới hệ thống con của bạn như là một tập các Dịch vụ. Mở một giao thức sao cho bất kỳ ai muốn tích hợp tới đều có thể dùng nó. 
+
+Tăng cường và mở rộng giao thức để đối phó với yêu cầu tích hợp mới, trừ khi một nhóm lẻ có yêu cầu riêng. Sau đó, dùng một trình phiên dịch **chỉ dùng một lần** để bổ sung cho giao thức với trường hợp đặc biệt đó sao cho giao thức chia sẻ trở nên đơn giản và gắn kết.
