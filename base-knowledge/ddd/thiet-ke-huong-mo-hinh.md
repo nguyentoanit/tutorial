@@ -175,3 +175,5 @@ Chúng ta thường xuyên gặp tình huống viết một chương trình mớ
 Đây là một thử thách khác với người vẽ mô hình domain. Nhiều phần mềm cũ không được xây dựng với kỹ thuật mô hình domain và bản thân mô hình của họ lộn xộn, khó hiểu và khó làm.
 
 Có nhiều cách để hệ thống khách của chúng ta tương tác với hệ thống ngoài. Một trong những cách đó là kết nối mạng. Cả hai chương trình cần dùng chung giao thức mạng, và client cần tuân theo giao diện được cung cấp bởi hệ thống ngoài. Một phương pháp khác là tương tác với CSDL. Hệ thống ngoài tác động và lưu dữ liệu vào CSDL.
+
+Có rủi ro cho mô hình ngoài khi thay đổi mô hình của client nếu ta cho phép điều đó xảy ra. Chúng ta không thể bỏ qua sự tương tác với mô hình ngoài, nhưng chúng ta cần cẩn thận và cô lập hóa mô hình của chúng ta khỏi mô hình đó. Chúng ta cần xây dựng một **Lớp chống lại sự đổ vỡ** đứng giữa mô hình client và mô hình của hệ thống ngoài.
