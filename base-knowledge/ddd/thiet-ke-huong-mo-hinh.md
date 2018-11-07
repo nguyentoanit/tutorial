@@ -182,3 +182,8 @@ Khi một hệ thống con phải tích hợp với nhiều hệ thống khác, 
 Định nghĩa một giao thức cho phép truy cập tới hệ thống con của bạn như là một tập các Dịch vụ. Mở một giao thức sao cho bất kỳ ai muốn tích hợp tới đều có thể dùng nó. 
 
 Tăng cường và mở rộng giao thức để đối phó với yêu cầu tích hợp mới, trừ khi một nhóm lẻ có yêu cầu riêng. Sau đó, dùng một trình phiên dịch **chỉ dùng một lần** để bổ sung cho giao thức với trường hợp đặc biệt đó sao cho giao thức chia sẻ trở nên đơn giản và gắn kết.
+
+## Chưng cất
+Chưng cất là quá trình phân chia những thực thể tạo nên một thể hỗn hợp. 
+
+Mục đích việc chưng cất là trích xuất ra một thực thể cụ thể từ thể hỗn hợp. Trong quá trình chưng cất, chúng ta có thể tạo ra sản phẩm phụ (có thể thú vị).
