@@ -14,3 +14,9 @@
 ## Thiết kế System design
 - Thiết kế các layers, object, method...
 - Định nghĩa tên cho các object, method. Các parameters và các mà chúng giao tiếp với nhau.
+
+![alt text](https://github.com/nguyentoanit/tutorial/blob/master/base-knowledge/ddd/userstory4.png "System Design")
+
+> Tạo các folder và file cho dự án để tránh bị conflict giữa các members
+
+Từ những design. Bắt đầu chia task và assign cho mọi người.
