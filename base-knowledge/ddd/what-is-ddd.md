@@ -27,3 +27,6 @@ Tuy vậy những chuyên gia domain không thể hiểu được điều này.
 Dự án sẽ trở nên nghiêm trọng nếu các thành viên không sử dụng chung ngôn ngữ khi trao đổi về domain.
 
 Nên tạo ra các mô hình để mô tả về những nghiệp vụ dùng trong dự án. Khi đó mọi người sẽ dùng chung một ngôn ngữ và có thể hiểu đúng và nội dung đối phương đang nói một cách tốt hơn.
+
+# References:
+- https://github.com/nguyentoanit/ddd-playframework-scala
