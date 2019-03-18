@@ -1,3 +1,3 @@
 # tutorial
 ## Server
-- [Server.md](https://github.com/nguyentoanit/tutorial/server.md)
+- [Server.md](https://github.com/nguyentoanit/tutorial/blob/master/server.md)
