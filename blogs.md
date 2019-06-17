@@ -7,3 +7,4 @@
 - Tìm hiểu về Java NIO và so sánh với Java IO
 - Doing: [Giới thiệu về System Property trong Java](https://github.com/nguyentoanit/tutorial/blob/master/programing-languages/scala/system-property-en.md)
 - Tìm hiểu về View và Lazy trong Scala
+- Tìm hiểu về information seeking trên internet
