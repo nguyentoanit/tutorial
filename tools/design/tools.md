@@ -1,2 +1,2 @@
 ## Design Tool
-- (https://mockflow.com/)[https://mockflow.com/]
+- [Mockflow](https://mockflow.com/)
