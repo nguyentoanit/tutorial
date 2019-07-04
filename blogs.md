@@ -9,3 +9,4 @@
 - Tìm hiểu về View và Lazy trong Scala
 - Tìm hiểu về information seeking trên internet
 - Tìm kiểm về GraphQL để xây dựng API
+- Tìm hiểu về [gRPC](https://grpc.io/docs/guides/)
