@@ -10,3 +10,4 @@
 - Tìm hiểu về information seeking trên internet
 - Tìm kiểm về GraphQL để xây dựng API
 - Tìm hiểu về [gRPC](https://grpc.io/docs/guides/)
+- Tìm hiểu về nguyên lý SOLID
