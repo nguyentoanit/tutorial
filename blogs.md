@@ -10,6 +10,6 @@
 - Tìm hiểu về information seeking trên internet
 - Tìm kiểm về GraphQL để xây dựng API
 - Tìm hiểu về [gRPC](https://grpc.io/docs/guides/)
-- 
 - [Nguyên tắc SOLID là gì? Tại sao nên áp dụng vào việc phát triển phần mềm?](https://labs.septeni-technology.jp/none/nguyen-tac-solid-la-gi-tai-sao-nen-ap-dung-vao-viec-phat-trien-phan-mem/)
 - Best Practice trong Scala
+- Serverless và AWS Lambda function
