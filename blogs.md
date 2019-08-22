@@ -14,3 +14,4 @@
 - Best Practice trong Scala
 - Serverless và AWS Lambda function
 - Tại sao nên dùng Log Format
+- Tìm hiểu về Go Lang
