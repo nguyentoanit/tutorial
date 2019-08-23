@@ -15,3 +15,4 @@
 - Serverless và AWS Lambda function
 - Tại sao nên dùng Log Format
 - Tìm hiểu về Go Lang
+- Reactive Programing và những ví dụ thực tế
