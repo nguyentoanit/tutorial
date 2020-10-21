@@ -16,3 +16,4 @@
 - Tại sao nên dùng Log Format
 - Tìm hiểu về Go Lang
 - Reactive Programing và những ví dụ thực tế
+- [SQL naming conventions](https://launchbylunch.com/posts/2014/Feb/16/sql-naming-conventions/)
