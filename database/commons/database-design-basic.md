@@ -7,5 +7,14 @@ A good database design is, therefore, one that:
   - Helps support and ensure the accuracy and integrity of your information.
   - Accommodates your data processing and reporting needs.
 
+## Turning information items into columns
+To determine the columns in a table, decide what information you need to track about the subject recorded in the table.
+
+The following list shows a few tips for determining your columns.
+
+## Applying the normalization rules
+
+
 ## Ref: 
 - https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5
+- https://www.guru99.com/database-normalization.html
